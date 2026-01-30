@@ -1,0 +1,8 @@
+def calculate_sale_price(a,b):
+    new_price = a * ((100-b)/100)
+    return new_price
+
+original_price = float(input())
+percentage_discount = int(input())
+new_price = calculate_sale_price(original_price, percentage_discount)
+print(new_price)
