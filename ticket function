@@ -1,0 +1,12 @@
+def get_ticket_cost(a):
+    if a < 5:
+        cost = 0
+    elif a >= 5 and a <= 17:
+        cost = 10
+    elif a >= 18:
+        cost = 20
+    return cost
+
+age = int(input())
+cost = get_ticket_cost(age)
+print(cost)
