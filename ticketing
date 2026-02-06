@@ -1,0 +1,8 @@
+tickets = 50
+while tickets > 0:
+    number_of_tickets = int(input("how many tickets"))
+    tickets = tickets - number_of_tickets
+    if tickets > 0:
+        print("Tickets Booked")
+
+print("Not enough tickets")
