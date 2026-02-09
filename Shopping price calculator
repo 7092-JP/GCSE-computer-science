@@ -1,0 +1,5 @@
+item = input()
+price = int(input())
+discount = int(input())
+final_price = price * (1 - (discount/100))
+print("{}:{}".format(item, final_price))
