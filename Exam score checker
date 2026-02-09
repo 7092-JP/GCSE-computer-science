@@ -1,0 +1,7 @@
+score = int(input())
+passed = score > 50 
+
+if passed:
+    print("Pass")
+else:
+    print("Fail")
