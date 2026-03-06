@@ -1,0 +1,5 @@
+scores = [1, 2, 3 ,4, 5]
+print(scores[0])
+print(scores[4])
+scores[3] = 20
+scores[6] = 17
