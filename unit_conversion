@@ -1,0 +1,26 @@
+print("length unit converter, mm > cm > m > km")
+initial_unit = input("initial unit:")
+final_unit = input("final unit:")
+initial_value = int(input("initial value:"))
+
+if initial_unit == "mm":
+    meters = initial_value / 1000
+elif initial_unit == "cm":
+    meters = initial_value / 100
+elif initial_unit == "m":
+    meters = initial_value
+elif initial_unit == "km":
+    meters = initial_value * 1000
+
+
+
+if final_unit == "mm":
+    final_value = meters * 1000
+elif final_unit == "cm":
+    final_value = meters * 100
+elif final_unit == "m":
+    final_value = meters
+elif final_unit == "km":
+    final_value = meters / 1000
+
+print(final_value)
