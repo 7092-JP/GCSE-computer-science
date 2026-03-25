@@ -1,0 +1,13 @@
+total = int(input())
+if total >= 100:
+    final = total * 0.8
+    discount = total - final
+    print("Discount: £{} - Final price: £{}".format(discount, final))
+
+elif total >= 50 and total <= 99:
+    final = total * 0.9
+    discount = total - final
+    print("Discount: £{} – Final price: £{}".format(discount, final))
+
+else:
+    print("Discount: £0.0 – Final price: £{}.0".format(total))
