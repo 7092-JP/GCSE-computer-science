@@ -1,0 +1,8 @@
+num_of_nums = int(input())
+sum = 0
+for i in range(num_of_nums):
+    num = int(input())
+    sum = num + sum
+
+avg = sum/num_of_nums
+print("Average:", avg)
