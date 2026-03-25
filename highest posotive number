@@ -1,0 +1,14 @@
+posotive_numbers = 0
+highest_number = 0
+for i in range(1,6):
+    num = int(input())
+    if num > 0:
+        posotive_numbers += 1
+        if num > highest_number:
+            highest_number = num
+            
+if posotive_numbers > 0:
+    print("The highest positive number is", highest_number)
+
+else:
+    print("No positive numbers entered")
