@@ -1,0 +1,13 @@
+year = input()
+y1 = year[0]
+y2 = year[1]
+y3 = year[2]
+y4 = year[3]
+
+y1 = int(y1)
+y2 = int(y2)
+y3 = int(y3)
+y4 = int(y4)
+
+sum = y1 + y2 + y3 + y4
+print(sum)
