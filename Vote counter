@@ -1,0 +1,17 @@
+voteA = 0
+voteB = 0
+voteC = 0
+vote = "ready to vote"
+while vote!= "END":
+    vote = input("who would you like to vote for?")
+    if vote == "A":
+        voteA = voteA + 1
+    elif vote == "B":
+        voteB = voteB + 1
+    elif vote == "C":
+        voteC = voteC + 1
+total = voteA + voteB + voteC
+print("votes for A:", voteA)
+print("votes for B:", voteB)
+print("votes for C:", voteC)
+print("total votes:", total)
