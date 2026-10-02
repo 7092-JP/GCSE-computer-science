@@ -1,0 +1,98 @@
+import random
+import time
+player1_name = input("player 1, what is your name:")
+player2_name = input("player 2, what is your name:")
+round = 1
+difference = 0
+player1_score = 0
+player2_score = 0
+while round < 6:
+    print("round:", round)
+    player1_roll1 = random.randint(1,6)
+    player1_roll2 = random.randint(1,6)
+    player1_points = player1_roll1 + player1_roll2
+    if player1_points%2 == 0:
+        player1_points = player1_points + 10
+    else:
+        player1_points = player1_points - 5
+    player1_score = player1_score + player1_points
+    if player1_score < 0:
+        player1_score = 0
+    print(player1_name, ", you rolled: {} and {}. {} points added. you are currently on {} points in total".format(player1_roll1, player1_roll2, player1_points, player1_score ))
+    print("rolling...")
+    time.sleep(3)
+    if player1_roll1 == player1_roll2:
+        player1_roll1 = random.randint(1,6)
+        player1_roll2 = random.randint(1,6)
+        player1_points = player1_roll1 + player1_roll2
+        if player1_points%2 == 0:
+            player1_points = player1_points + 10
+        else:
+            player1_points = player1_points - 5
+        player1_score == player1_score + player1_points
+        if player1_score < 0:
+            player1_score = 0
+        print(player1_name, ", you rolled: {} and {}. {} points added. you are currently on {} points in total".format(player1_roll1, player1_roll2, player1_points, player1_score ))
+    print("rolling...")
+    time.sleep(3)
+    player2_roll1 = random.randint(1,6)
+    player2_roll2 = random.randint(1,6)
+    player2_points = player2_roll1 + player2_roll2
+    if player2_points%2 == 0:
+        player2_points = player2_points + 10
+    else:
+        player2_points = player2_points - 5
+    player2_score = player2_score + player2_points
+    if player2_score < 0:
+        player2_score = 0
+    print(player2_name, ", you rolled: {} and {}. {} points added. you are currently on {} points in total".format(player2_roll1, player2_roll2, player2_points, player2_score ))
+    print("rolling...")
+    time.sleep(3)
+    if player2_roll1 == player2_roll2:
+        player2_roll1 = random.randint(1,6)
+        player2_roll2 = random.randint(1,6)
+        player2_points = player2_roll1 + player2_roll2
+        if player2_points%2 == 0:
+            player2_points = player2_points + 10
+        else:
+            player2_points = player2_points - 5
+        player2_score == player2_score + player2_points
+        if player2_score < 0:
+            player2_score = 0
+        print(player2_name, ", you rolled: {} and {}. {} points added. you are currently on {} points in total".format(player2_roll1, player2_roll2, player2_points, player2_score ))
+    print("loading scores for end of round{}...".format(round))
+    time.sleep(3)
+    if player1_score > player2_score:
+        difference = player1_score - player2_score
+        print("at the end of round {}, {} is winning by {} points.".format(round, player1_name, difference))
+    elif player1_score < player2_score:
+        difference = player2_score - player1_score
+        print("at the end of round {}, {} is winning by {} points.".format(round, player2_name, difference))
+    elif player1_score == player2_score:
+        print("at the end of found {}, the scores are equal".format(round))
+    round = round + 1
+    time.sleep(3)
+
+if player1_score > player2_score:
+    print("{} wins!".format(player1_name))
+elif player2_score > player1_score:
+    print("{} wins!".format(player2_name))
+elif player1_score == player2_score:
+    player1_roll_tiebreaker = 0
+    player2_roll_tiebreaker = 0
+    while player1_roll_tiebreaker == player2_roll_tiebreaker:
+        print("rolling for tiebreaker...")
+        time.sleep(3)
+        player1_roll_tiebreaker = random.randint(1,6)
+        player2_roll_tiebreaker = random.randint(1,6)
+        if player1_roll_tiebreaker > player2_roll_tiebreaker:
+            print("{} rolled {} and {} rolled {}. {} wins!".format(player1_name, player1_roll_tiebreaker, player2_name, player2_roll_tiebreaker, player1_name))
+        elif player1_roll_tiebreaker < player2_roll_tiebreaker:
+            print("{} rolled {} and {} rolled {}. {} wins!".format(player1_name, player1_roll_tiebreaker, player2_name, player2_roll_tiebreaker, player2_name))
+        elif player1_roll_tiebreaker == player2_roll_tiebreaker:
+                  print("still drawing... rolling again")
+                  time.sleep(3)
+
+
+
+
